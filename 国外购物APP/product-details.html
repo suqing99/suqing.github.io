@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>product-details</title>
+  <script src="bootstrap/js/jquery-1.11.1.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/product-details.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row header">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        <a href="shop.html"><img src="images/shop_01.png" class="img-responsive center-block" alt=""></a>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <h2 class="text-center">Product Details</h2>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        <img src="images/shop_02.png" class="img-responsive center-block" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div id="carousel-example-generic" class="container-fluid banner carousel slide" data-ride="carousel">
+    <div class="banner-box">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="./images/product-details_033.png">
+          <span id="btnB" class="glyphicon glyphicon-heart-empty active xinbt"></span>
+        </div>
+        <div class="item">
+          <img src="./images/product-details_033.png">
+          <span id="btnB" class="glyphicon glyphicon-heart-empty active xinbt"></span>
+        </div>
+        <div class="item">
+          <img src="./images/product-details_033.png">
+          <span id="btnB" class="glyphicon glyphicon-heart-empty active xinbt"></span>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="container-fluid shop-details">
+    <div class="container">
+      <div class="row details">
+        <div class="col-lg-10 col-md-10 col-xs-10 col-sm-10">
+          <h3>Fresh Homemade Burger</h3>
+          <p>Price: <span> $5 </span><s>$10</s></p>
+          <p><span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star xin"></span>
+            <span class="text-nub">(215)</span>
+          </p>
+        </div>
+        <div class="img col-lg-2 col-md-2 col-xs-2 col-sm-2">
+          <a href="shop-cart.html"><img src="images/product-details_04.png" alt="" class="img-responsive center-block"></a>
+        </div>
+      </div>
+      <div class="row introduce-title">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h1>
+            Description
+          </h1>
+        </div>
+      </div>
+      <div class="row introduce-text">
+        <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <p>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Suspendisse sed leo tellus. Praesent nec vehicula ligula, 
+           non laoreet ligula. Maecenas at massa eget orci porttitor semper.
+            Sed lobortis magna in faucibus commodo. Ut purus odio, gravida sit 
+            amet laoreet at, dictum et urna. 
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<script>
+
+  var xinbt = document.getElementsByClassName("xinbt");
+
+  for (var i = 0; i < xinbt.length; i++) {
+    console.log(i);
+    xinbt[i].onclick = function () {
+      console.log(i);
+      if (this.style.color == "red") {
+        this.className = "glyphicon glyphicon-heart-empty";
+        this.style.color = "white";
+      } else {
+        this.style.color = "red";
+        this.className = "glyphicon glyphicon-heart";
+      }
+    }
+  }
+
+
+</script>

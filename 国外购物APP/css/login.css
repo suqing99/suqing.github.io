@@ -1,0 +1,176 @@
+@import url(animate.css);
+@import url(base.css);
+@import url(login.css);
+body, html {
+  background: url("../images/bg.png") no-repeat;
+  background-size: 100% 100%;
+  font-size: 10px;
+}
+
+.header h1 {
+  margin-top: 50px;
+  font-family: sks;
+  font-size: 7rem;
+  color: #ffffff;
+}
+.header h2 {
+  font-family: sks;
+  font-size: 4rem;
+  color: #ffbf25;
+  padding-bottom: 75px;
+}
+
+.paws {
+  margin-top: 30px;
+}
+
+.menu input {
+  font-size: 2.6rem;
+  color: #ffffff;
+  font-family: sks;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  text-indent: 28px;
+  line-height: 80px;
+  border: 0px;
+  outline: none;
+  background-color: rgba(238, 152, 117, 0.8);
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 26px;
+}
+.menu button {
+  cursor: pointer;
+  font-size: 2.6rem;
+  color: #ffffff;
+  font-family: sks;
+  font-weight: 600;
+  width: 100%;
+  line-height: 80px;
+  background-color: #ffbf25;
+}
+.menu button:hover {
+  background-color: rgba(255, 220, 139, 0.5);
+}
+.menu button span {
+  padding-right: 38px;
+}
+
+.paws h3, .log h3 {
+  font-size: 2.6rem;
+  color: #ffffff;
+  font-family: sks;
+  font-weight: 600;
+}
+
+.log h3 {
+  position: relative;
+}
+.log h3::before {
+  display: inline-block;
+  content: '';
+  width: 10%;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 14px;
+  left: 112px;
+}
+.log h3::after {
+  display: inline-block;
+  content: '';
+  width: 10%;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 14px;
+  right: 112px;
+}
+
+.with {
+  margin-top: 20px;
+}
+
+.footer {
+  padding-top: 50px;
+  padding-bottom: 133px;
+}
+.footer .foot {
+  padding: 0px;
+}
+.footer .foot button:first-child {
+  font-size: 2.4rem;
+  color: #ffffff;
+  font-family: sks;
+  font-weight: 600;
+  width: 50%;
+  line-height: 80px;
+  background-color: #3b5998;
+}
+.footer .foot button img, .footer .foot .foots button img {
+  margin-right: 5px;
+  display: inline-block;
+}
+.footer .foot button:last-child {
+  background-color: #00acee;
+  font-size: 2.4rem;
+  color: #ffffff;
+  font-family: sks;
+  font-weight: 600;
+  width: 50%;
+  line-height: 80px;
+  margin-left: -15px;
+}
+
+@media (max-width: 580px) {
+  .header h1 {
+    font-size: 5rem;
+  }
+
+  .header h2 {
+    font-size: 3rem;
+    padding-bottom: 35px;
+  }
+
+  .menu input {
+    line-height: 60px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .menu button {
+    line-height: 60px;
+    font-size: 2rem;
+  }
+
+  .paws h3, .log h3 {
+    font-size: 2rem;
+  }
+
+  .footer .foot button:first-child {
+    line-height: 60px;
+    font-size: 2rem;
+  }
+
+  .footer .foot button:last-child {
+    line-height: 60px;
+    font-size: 2rem;
+  }
+
+  .footer {
+    padding-top: 33px;
+    padding-bottom: 65px;
+  }
+
+  .log h3::before {
+    top: 11px;
+    left: 40px;
+  }
+
+  .log h3::after {
+    top: 11px;
+    right: 40px;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

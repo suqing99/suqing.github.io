@@ -1,0 +1,109 @@
+@import url(base.css);
+@import url(animate.css);
+@import url(shop.css);
+body, html {
+  background: url("../images/bg.png") no-repeat;
+  font-size: 10px;
+  background-size: 100%;
+}
+
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.header {
+  margin-top: 40px;
+}
+.header img {
+  max-width: 100%;
+}
+.header h2 {
+  font-family: sks;
+  font-weight: 600;
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.content {
+  margin-top: 15px;
+  background: #ffffff;
+}
+.content .title h4 {
+  padding-top: 25px;
+  font-size: 3.4rem;
+  color: #6c6c6c;
+  font-family: sks;
+  font-weight: 600;
+}
+.content .nav-tabs {
+  margin-top: 27px;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  border: 1px solid #ffbf25;
+}
+.content .nav-tabs li {
+  margin-bottom: 0px;
+  width: 50%;
+}
+.content .nav-tabs li a {
+  margin-right: 0;
+  padding: 15px 0;
+  text-align: center;
+  color: #d35d2e;
+  font-size: 2.4rem;
+  border: 0;
+}
+.content .nav-tabs li a:hover {
+  color: #333333;
+  cursor: default;
+  background-color: #f5f5f5;
+  border: 0;
+  border-radius: 5px;
+}
+.content .nav-tabs .active a {
+  padding: 15px 0;
+  color: #333333;
+  cursor: default;
+  background-color: #f5f5f5;
+}
+.content .tab-list .tab-box {
+  position: relative;
+}
+.content .tab-list .tab-box p {
+  text-align: center;
+}
+.content .tab-list .tab-box .price-name {
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.content .tab-list .tab-box .price {
+  color: #6c6c6c;
+  font-size: 2.5rem;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+.content .tab-list .tab-box .price span {
+  color: red;
+}
+.content .tab-list .tab-box .glyphicon {
+  color: #ffffff;
+  font-size: 3rem;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
+@media (max-width: 580px) {
+  .content .tab-list .tab-box .price-name {
+    font-size: 1.8rem;
+  }
+
+  .content .tab-list .tab-box .price {
+    font-size: 1.6rem;
+  }
+}
+
+/*# sourceMappingURL=shop.css.map */

@@ -1,0 +1,172 @@
+@charset 'utf-8';
+@import "animate.css";
+@import "base.css";
+@import "login.css";
+
+body,html{
+    background: url('../images/bg.png') no-repeat;
+    background-size: 100% 100%;
+    font-size: 10px;
+}
+
+@mixin font {
+    font-size: 2.6rem;
+    color: #ffffff;
+    font-family: sks;
+    font-weight:600;
+}
+@mixin fonts {
+    font-size: 2.4rem;
+    color: #ffffff;
+    font-family: sks;
+    font-weight:600;
+    width: 50%;
+    line-height: 80px;
+}
+@mixin  weilei {
+    display: inline-block;
+    content: '';
+    width: 10%;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+}
+$font-family: sks;
+$color:#ffffff;
+
+.header{
+    h1{
+        margin-top: 50px;
+        font-family:  $font-family;
+        font-size: 7rem;
+        color: $color;
+    }
+    h2{
+        font-family:  $font-family;
+        font-size: 4rem;
+        color: #ffbf25;
+        padding-bottom: 75px;
+    } 
+}
+.paws{
+    margin-top: 30px;
+}
+.menu {
+    input{
+        @include font;
+        cursor: pointer;
+        width: 100%;
+        text-indent: 28px;
+        line-height: 80px;
+        border: 0px;
+        outline: none;
+        background-color: rgba(238,152,117,.8);
+        border-bottom: 1px solid $color;
+        margin-bottom: 26px;
+    }
+    button {
+        cursor: pointer;
+        @include font;
+        width: 100%;
+        line-height: 80px;
+        background-color: #ffbf25;
+        &:hover{
+            background-color: rgba(#ffdc8b, .5)
+        }
+        span{
+            padding-right: 38px;
+        }
+    }
+ 
+}
+ 
+.paws h3,.log h3{
+    @include font;
+    
+}
+.log{
+   
+    h3{
+         position: relative;
+    }
+   
+    h3::before{
+        @include weilei;
+        top: 14px;
+        left: 112px
+    }   
+    h3::after{
+        @include weilei;
+        top: 14px;
+        right: 112px
+    }
+}
+.with{
+    margin-top: 20px;
+}
+
+.footer{
+    padding-top: 50px;
+    padding-bottom: 133px;
+    .foot{
+        button:first-child{
+            @include fonts;
+            background-color: #3b5998;
+        }
+        button img,.foots button img{
+            margin-right: 5px;
+            display: inline-block;
+        }
+        button:last-child{
+            background-color: #00acee;
+        @include fonts;
+            margin-left: -15px;
+        }
+            padding: 0px;
+    }
+}
+
+    
+@media (max-width: 580px) {
+
+    .header h1 {
+        font-size: 5rem;
+    }
+    .header h2 {
+        font-size: 3rem;
+        padding-bottom: 35px;
+    }
+    .menu input{
+        line-height: 60px;
+       font-size: 2rem;
+       margin-bottom: 20px;
+    }
+    .menu button{
+        line-height: 60px;
+        font-size: 2rem;
+    }
+    .paws h3, .log h3{
+        font-size: 2rem;
+    }
+    .footer .foot button:first-child{
+        line-height: 60px;
+        font-size: 2rem;
+    }
+    .footer .foot button:last-child{
+        line-height: 60px;
+        font-size: 2rem;
+    }
+    .footer {
+        padding-top: 33px;
+        padding-bottom: 65px;
+    }
+    .log h3::before {
+        top: 11px;
+        left: 40px;
+    }
+    .log h3::after {
+      
+        top: 11px;
+        right: 40px;
+    }
+}

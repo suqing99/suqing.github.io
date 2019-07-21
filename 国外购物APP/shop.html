@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop</title>
+    <script src="bootstrap/js/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row header">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+              <a href="list.html"> <img src="images/shop_01.png" class="img-responsive center-block" alt=""></a> 
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <h2 class="text-center">Shop</h2>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <img src="images/shop_02.png" class="img-responsive center-block" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid content">
+        <div class="container">
+            <div class="row">
+                <div class="title col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4 class="text-center">Food Items</h4>
+                </div>
+            </div>
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active">
+                    <a href="#Latest" data-toggle="tab">Latest</a>
+                </li>
+                <li>
+                    <a href="#Popular" data-toggle="tab">Popular</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div role="tabpanel" class="tab-list tab-pane fade in row active" id="Latest"
+                    aria-labelledby="tab1-tab">
+                    <div class="tab-box col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <a href="product-details.html"><img src="images/shop_03.png" class="img-responsive center-block" alt=""></a>
+                        <span id="btnB" class="glyphicon glyphicon-heart-empty active xinbt"></span>
+                        <p class="price-name">Picnic Cupcakes</p>
+                        <p class="price">Price: <span>$5</span></p>
+                    </div>
+                    <div class="tab-box col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <img src="images/shop_04.png" class="img-responsive center-block" alt="">
+                        <span class="glyphicon glyphicon-heart-empty xinbt"></span>
+                        <p class="price-name">Grilled Barbecue</p>
+                        <p class="price">Price: <span>$25</span></p>
+
+                    </div>
+                    <div class="tab-box col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <img src="images/shop_06.png" class="img-responsive center-block" alt="">
+                        <span class="glyphicon glyphicon-heart-empty xinbt"></span>
+                        <p class="price-name">Healthy Pasta</p>
+                        <p class="price">Price: <span>$25</span></p>
+
+                    </div>
+                    <div class="tab-box col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <img src="images/shop_06.png" class="img-responsive center-block" alt="">
+                        <span class="glyphicon glyphicon-heart-empty xinbt"></span>
+                        <p class="price-name">Morning Breakfast</p>
+                        <p class="price">Price: <span>$25</span></p>
+
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-list tab-pane fade" id="Popular" aria-labelledby="tab2-tab">
+                    <div class="tab-box col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <img src="images/shop_03.png" class="img-responsive center-block" alt="">
+                        <span id="btnB" class="glyphicon glyphicon-heart-empty active xinbt"></span>
+                        <p class="price-name">Picnic Cupcakes</p>
+                        <p class="price">Price: <span>$5</span></p>
+                    </div>
+                    <div class="tab-box col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <img src="images/shop_04.png" class="img-responsive center-block" alt="">
+                        <span class="glyphicon glyphicon-heart-empty xinbt"></span>
+                        <p class="price-name">Grilled Barbecue</p>
+                        <p class="price">Price: <span>$25</span></p>
+
+                    </div>
+                    <div class="tab-box col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <img src="images/shop_03.png" class="img-responsive center-block" alt="">
+                        <span id="btnB" class="glyphicon glyphicon-heart-empty active xinbt"></span>
+                        <p class="price-name">Picnic Cupcakes</p>
+                        <p class="price">Price: <span>$5</span></p>
+                    </div>
+                    <div class="tab-box col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <img src="images/shop_04.png" class="img-responsive center-block" alt="">
+                        <span class="glyphicon glyphicon-heart-empty xinbt"></span>
+                        <p class="price-name">Grilled Barbecue</p>
+                        <p class="price">Price: <span>$25</span></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+
+
+    var xinbt = document.getElementsByClassName("xinbt");
+
+    for (var i = 0; i < xinbt.length; i++) {
+        console.log(i);
+        xinbt[i].onclick = function () {
+            console.log(i);
+            if (this.style.color == "red") {
+                this.className = "glyphicon glyphicon-heart-empty";
+                this.style.color = "white";
+            } else {
+                this.style.color = "red";
+                this.className = "glyphicon glyphicon-heart";
+            }
+        }
+    }
+
+        // var xinbt = document.getElementsByClassName("xinbt");
+
+        // for(var i=0; i<xinbt.length; i++){
+        //     xinbt[i].onclick = function(){
+
+        //     }
+        // }
+
+
+
+</script>
