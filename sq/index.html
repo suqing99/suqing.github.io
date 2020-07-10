@@ -5,12 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>苏情</title>
+
+<link type="text/css" rel="stylesheet" href="css/qrj.css" />
 <style>
 h3{
 text-align: center;
 color: #5A5A5A;
 }
 	body{
+		cursor: pointer;
 		background: #000;
 	}
 	#box{
@@ -96,7 +99,143 @@ canvas {
 	z-index: 9;
 }
 </style>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	#he{
+		width: 100%;
+		display: flex;/*弹性盒模型*/
+		justify-content: center;/*主轴方向居中显示*/
+		align-items: center;/*交叉轴方向居中显示*/
+		height: 50vh;
+		position: absolute;
+		z-index: 99;
+	}
+	ul{
+		height: 200px;
+	}
+	li{
+		float: left;
+		width: 20px;
+		height: 20px;
+		border-radius: 20px;
+		margin-right: 10px;
+	}
+	li:nth-child(1){
+		background-color: #f62e74;
+		animation: love1 4s infinite;
+		box-shadow:0 0 100px #f62e74;
+		-webkit-box-shadow:0 0 100px #f62e74;
+		-moz-box-shadow:0 0 100px #f62e74;
+		-o-box-shadow:0 0 100px #f62e74;
+		-ms-box-shadow:0 0 100px #f62e74;
+	}
+	li:nth-child(2){
+		background-color: #f45330;
+		animation: love2 4s infinite;
+		animation-delay: 0.15s;
+		box-shadow:0 0 100px #f45330;
+		-webkit-box-shadow:0 0 100px #f45330;
+		-moz-box-shadow:0 0 100px #f45330;
+		-o-box-shadow:0 0 100px #f45330;
+		-ms-box-shadow:0 0 100px #f45330;
+	}
+	li:nth-child(3){
+		background-color: #ffc883;
+		animation: love3 4s infinite;
+		animation-delay: 0.3s;
+		box-shadow:0 0 100px #ffc883;
+		-webkit-box-shadow:0 0 100px #ffc883;
+		-moz-box-shadow:0 0 100px #ffc883;
+		-o-box-shadow:0 0 100px #ffc883;
+		-ms-box-shadow:0 0 100px #ffc883;
+	}
+	li:nth-child(4){
+		background-color: #30d268;
+		animation: love4 4s infinite;
+		animation-delay: 0.45s;
+		box-shadow:0 0 100px #30d268;
+		-webkit-box-shadow:0 0 100px #30d268;
+		-moz-box-shadow:0 0 100px #30d268;
+		-o-box-shadow:0 0 100px #30d268;
+		-ms-box-shadow:0 0 100px #30d268;
+	}
+	li:nth-child(5){
+		background-color: #006cb4;
+		animation: love5 4s infinite;
+		animation-delay: 0.6s;
+		box-shadow:0 0 100px #006cb4;
+		-webkit-box-shadow:0 0 100px #006cb4;
+		-moz-box-shadow:0 0 100px #006cb4;
+		-o-box-shadow:0 0 100px #006cb4;
+		-ms-box-shadow:0 0 100px #006cb4;
+	}
+	li:nth-child(6){
+		background-color: #784697;
+		animation: love4 4s infinite;
+		animation-delay: 0.75s;
+		box-shadow:0 0 100px #784697;
+		-webkit-box-shadow:0 0 100px #784697;
+		-moz-box-shadow:0 0 100px #784697;
+		-o-box-shadow:0 0 100px #784697;
+		-ms-box-shadow:0 0 100px #784697;
 	
+	}
+	li:nth-child(7){
+		background-color: #ffc883;
+		animation: love3 4s infinite;
+		animation-delay: 0.9s;
+		box-shadow:0 0 100px #ffc883;
+		-webkit-box-shadow:0 0 100px #ffc883;
+		-moz-box-shadow:0 0 100px #ffc883;
+		-o-box-shadow:0 0 100px #ffc883;
+		-ms-box-shadow:0 0 100px #ffc883;
+	}
+	li:nth-child(8){
+		background-color: #f45330;
+		animation: love2 4s infinite;
+		animation-delay: 1.05s;
+		box-shadow:0 0 100px #f45330;
+		-webkit-box-shadow:0 0 100px #f45330;
+		-moz-box-shadow:0 0 100px #f45330;
+		-o-box-shadow:0 0 100px #f45330;
+		-ms-box-shadow:0 0 100px #f45330;
+	}
+	li:nth-child(9){
+		background-color: #f62e74;
+		animation: love1 4s infinite;
+		animation-delay: 1.2s;
+		box-shadow:0 0 100px #f62e74;
+		-webkit-box-shadow:0 0 100px #f62e74;
+		-moz-box-shadow:0 0 100px #f62e74;
+		-o-box-shadow:0 0 100px #f62e74;
+		-ms-box-shadow:0 0 100px #f62e74;
+	}
+	@keyframes love1{
+		30%,50%{height: 50px; transform: translateY(-30px);}
+		75%,100%{height: 20px; transform: translateY(0);}
+	}
+	@keyframes love2{
+		30%,50%{height: 115px; transform: translateY(-62.5px);}
+		75%,100%{height: 20px; transform: translateY(0);}
+		
+	}
+	@keyframes love3{
+		30%,50%{height: 150px; transform: translateY(-75px);}
+		75%,100%{height: 20px; transform: translateY(0);}
+	}
+	@keyframes love4{
+		30%,50%{height: 170px; transform: translateY(-60px);}
+		75%,100%{height: 20px; transform: translateY(0);}
+	}
+	@keyframes love5{
+		30%,50%{height: 180px; transform: translateY(-45px);}
+		75%,100%{height: 20px; transform: translateY(0);}
+	}
+	</style>
 <script src="https://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script> 
 <script type="text/javascript"> 
 $(function(){ 
@@ -144,7 +283,31 @@ $('#newMessageDIV').html('<audio autoplay="autoplay"><source src="images/3586937
 	<canvas id="bgCanvas">
    
 	</canvas>
-<h3>按住鼠标左键拖动</h3>
+	<center>
+		<!-- 正文 -->
+		<div class="view-top">
+			<div class="heart-vt">
+			  <div id="valentine">
+				<div class="shake">
+					<div class="rope"></div>
+					<div class="heart-wrap">
+						<img src="images/loveb.png" class="heart">
+						<img src="images/loves.png" class="beat">
+					</div>
+				</div>
+				<div class="tiny"></div>
+				<div class="close">&times;</div>
+			  </div>
+			</div>
+		
+		</div>
+		
+		<!-- 全局通用组件 -->
+		<script src="js/jquery.min.js"></script>
+		<!--animation.js-->
+		<script src="js/qrj.js"></script>
+		</center>
+
 <div id="box">
 	<div class="front"></div>
 	<div class="back"></div>
@@ -152,6 +315,20 @@ $('#newMessageDIV').html('<audio autoplay="autoplay"><source src="images/3586937
 	<div class="bottom"></div>
 	<div class="left"></div>
 	<div class="right"></div>
+</div>
+
+<div id="he">
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
 </div>
 <div id="newMessageDIV" style="display:none"></div>
 
@@ -172,7 +349,7 @@ $('#newMessageDIV').html('<audio autoplay="autoplay"><source src="images/3586937
 		width = window.innerWidth,
 		height = document.body.offsetHeight;
   
-	(height < 400) ? height = 400 : height;
+	(height < 900) ? height = 900 : height;
   
 	background.width = width;
 	background.height = height;
@@ -332,4 +509,162 @@ $('#newMessageDIV').html('<audio autoplay="autoplay"><source src="images/3586937
 	}
 	animate();
   </script>
-  
+
+
+<!-- <script>
+	window.onload = function() {
+	//定义点击出现文字类
+	function ClickFrontShow() {
+		//定义所需文字和颜色
+		this.fron = ['高兴', '开心', '❤', '欢乐', '愉悦', '愉快', '快乐', '欢喜', '喜悦', '欢欣', '欢畅', '欢腾', '雀跃', '欢快'];
+		this.colo = ['#FF69B4', '#ff6651', 'orange', '#FF00FF', '#00FF7F', '#00BFFF', '#BA55D3'];
+		//获取body元素
+		this.elBody = document.getElementsByTagName("body")[0];
+		//初始化randomNum
+		this.randomNum = null;
+		//初始化字体inde
+		this.finde = 0;
+		//初始化className
+		this.cls = 0;
+	}
+	
+	//定义初始化
+	ClickFrontShow.prototype.init = function(frontArray, colorArray) {
+		//自定义颜色和字体
+		this.fron = frontArray || this.fron;
+		this.colo = colorArray || this.colo;
+		
+		this.listenMouse();
+	}
+	
+	//创建文字 
+	ClickFrontShow.prototype.createFront = function (classname) {
+		var self = this;
+		let ospan = document.createElement('span');
+		//设置样式
+		let cssText = "position:absolute; width: 40px; height: 20px; cursor: default; transform: translate(-50%,-50%); font-weight: bold; opacity: 1; z-index: 1000; transition: 1s;";
+		//随机字体和颜色
+		let randomFront = self.fron[self.finde];
+		let randomColor = self.colo[Math.round(Math.random()*(self.colo.length-1))];
+		//字体下标增1
+		self.finde = (self.finde+1) % self.fron.length;
+		//向body中添加元素
+		self.elBody.appendChild(ospan);
+		//绑定一个classname
+		ospan.className = String(classname);
+		//添加样式
+		ospan.style.cssText = cssText + "-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;"
+		ospan.style.color = randomColor;
+		ospan.innerHTML = randomFront;
+	}
+	
+	
+	//监听鼠标点击
+	ClickFrontShow.prototype.listenMouse = function() {
+		var self = this;
+
+		//鼠标点击事件
+		document.onclick = function(e) {
+			//避免classname值重复导致出现bug
+			if(self.cls === 20){
+				self.cls = 0;
+			}else{
+				self.cls += 1;
+			}
+			//创建文字
+			self.createFront(self.cls);
+			let el = document.getElementsByClassName(self.cls)[0];
+			
+			//鼠标点击位置
+			el.style.left = e.clientX + 'px';
+			el.style.top = e.clientY + 'px';
+			
+			//过时改变
+			setTimeout(function() {
+				el.style.opacity = 0;
+				el.style.top = el.offsetTop - 100 + 'px';
+			}, 100);
+			//过时清除
+			setTimeout(function() {
+				self.elBody.removeChild(el);
+			}, 2000);
+		}
+		
+	}
+	
+	//实例化
+	var frontShow = new ClickFrontShow();
+	//用户可在此传递参数，默认第一个参数是字体数组；
+	//第二个参数是颜色数组，必须是数组类型！
+	frontShow.init();
+ }
+
+</script>
+   -->
+
+   <script>
+	//鼠标点击特效
+	//页面加载事件
+	jQuery(function () {
+
+		//声明变量
+		var 点击数 = 0;
+
+		//给页面创建点击事件
+		$("html").click(function (e) {
+
+			//创建颜色库
+			//随机颜色
+			//创建颜色码
+			const 前颜色码库 = new Array('00', '11', '22', '33', '44', '55', '66', '77', '88', '99',
+				'aa', 'bb', 'cc', 'dd', 'ee', 'ff');
+			const 中颜色码库 = new Array('00', '11', '22', '33', '44', '55', '66', '77', '88', '99',
+				'aa', 'bb', 'cc', 'dd', 'ee', 'ff');
+			const 后颜色码库 = new Array('00', '11', '22', '33', '44', '55', '66', '77', '88', '99',
+				'aa', 'bb', 'cc', 'dd', 'ee', 'ff');
+
+			//从颜色库选取一种颜色;当然这是数组的方式;随机性
+			var 前颜色码 = Math.floor(Math.random() * 前颜色码库.length);
+			var 中颜色码 = Math.floor(Math.random() * 中颜色码库.length);
+			var 后颜色码 = Math.floor(Math.random() * 后颜色码库.length);
+
+			// console.log("前颜色码 = " + 前颜色码 + "; 中颜色码 = " + 中颜色码 + "; 后颜色码 = " + 后颜色码 + ";")
+			// console.log("#" + 前颜色码库[前颜色码] + 中颜色码库[中颜色码] + 后颜色码库[后颜色码]);
+
+			//每当鼠标点击页面增加点击数
+			点击数++;
+
+			//创建元素; 创建的元素是span元素,这个元素的内容是"鼠标点击了第" + 点击数(这个是一个变量) + "次"
+			var 创建元素 = $("<span>").text("鼠标点击了第" + 点击数 + "次");
+
+			//在页面上添加span元素
+			jQuery("html").append(创建元素);
+
+			//获取鼠标点击坐标
+			var 横坐标 = e.pageX;
+			var 纵坐标 = e.pageY;
+
+			//给span元素添加css样式
+			创建元素.css({
+				"z-index": 999, //设置或获取定位对象的堆叠次序(z-index):999
+				"top": 纵坐标 - 20, //上(top):y-20
+				"left": 横坐标, //左:x
+				"position": "absolute", //定位:绝对定位
+				"font-weight": "bold", //字体粗细:粗体
+				"color": "#" + 前颜色码库[前颜色码] + 中颜色码库[中颜色码] + 后颜色码库[后颜色码], //颜色:绿色
+				"user-select": "none", //使文字不被选中
+			});
+
+			//
+			创建元素.animate({
+					"top": 纵坐标 - 180, //上:y-180 
+					"opacity": 0 //透明度(opacity):0 
+				}, 2000, //1500,调节动画速度 
+				function () { //功能函数 
+					创建元素.remove(); //$i的删除
+				}
+			);
+
+		})
+	})
+</script>
